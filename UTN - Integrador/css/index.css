@@ -2,6 +2,7 @@ body {
     overflow-x: hidden;
     font-family: Sans-Serif;
     margin: 0;
+    background-color: #FCF5ED;
   }
   
 .content {
@@ -13,7 +14,7 @@ body {
 }
 
 footer {
-    background-color: #ccc;
+    background-color: #748e63;
     clear: both;
     color: #333;
     text-align: center;
@@ -25,7 +26,9 @@ footer {
 .menu-container {
     position: relative;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
     background: #748e63;
     color: #a8ce7d;
@@ -33,6 +36,7 @@ footer {
   }
   
   .menu-logo {
+    
     line-height: 0;
     margin: 0 20px;
   }
@@ -52,9 +56,13 @@ footer {
   .menu-container a:hover {
     color: #f9b572;
   }
+
+  nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
   
   .menu-container input {
-    display: block;
+    display: flex;
     width: 35px;
     height: 25px;
     margin: 0;
@@ -64,10 +72,28 @@ footer {
     z-index: 2; /* and place it over the hamburger */
     -webkit-touch-callout: none;
   }
+
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__link {
+  position: relative;
+  font-size: 1.25rem;
+}
+
+
+
   
   /* Burger menu */
   .menu-container span {
-    display: block;
+    display: flex;
     width: 33px;
     height: 4px;
     margin-bottom: 5px;
@@ -92,7 +118,7 @@ footer {
   .menu-container input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(3px,-1px);
-    background: #748e63;
+    background: #a8ce7d;
   }
   
   .menu-container input:checked ~ span:nth-child(4) {
@@ -112,6 +138,8 @@ footer {
     padding: 10px 0;
     font-size: 22px;
   }
+
+  
   
   /* mobile styles */
   @media only screen and (max-width: 767px) { 
@@ -136,13 +164,11 @@ footer {
   
     .menu {
       position: absolute;
-      box-sizing: border-box;
       width: 300px;
       right: -300px;
       top: 0;
       margin: -20px;
       padding: 75px 50px 50px;
-      background: #a8ce7d;
       -webkit-font-smoothing: antialiased;
       /* to stop flickering of text in safari */
       transform-origin: 0% 0%;
@@ -176,7 +202,7 @@ footer {
   
     .menu {
       position: relative;
-      width: 100%;
+
       display: flex;
       justify-content: space-between;
     }
@@ -191,3 +217,59 @@ footer {
     }
   }
 
+  .holder {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  .bienvenidos {
+    width: 75%;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+  
+  .testimonios {
+    width: 25%;
+  }
+  
+  .columnas {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .bienvenidos p {
+    font-size: 20px;
+  }
+  
+  .testimonio {
+    background-color: #ccc;
+    padding: 16px;
+  }
+  
+  .testimonio .cita {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+  }
+  
+  .testimonio .autor {
+    font-size: 10px;
+    text-align: center;
+    display: block;
+    margin: 12px 0;
+  }
+  
+  .historia p {
+    font-size: 12px;
+  }
+
+  .imgleft {
+    width:20%;
+}
+
+  .imghome {
+    position: bottom relative;
+    display: block;
+    float: left inline-end;
+  }
