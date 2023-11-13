@@ -144,6 +144,90 @@ ul {
   
 }
 
+.team_container{
+  width: 100%;
+  height: auto;
+    
+}
+
+.text {
+  color: #879b70;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.row {
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: center;
+}
+
+.tarj-perfil {
+  background-color: #ffcc80;
+  width: 270px;
+  height: 270px;
+  margin: 20px 10px 10px 10px;
+}
+
+.profile-content {
+  padding: 15px;
+}
+
+.img-card {
+  width: 80px;
+  height: auto;
+  border-radius: 50px;
+}
+
+.profile-image {
+  text-align: center;
+
+}
+
+.descripcion {
+  text-align: center;
+}
+
+.descripcion h2 {
+  color: #748e63;
+  font-size: 20px;
+}
+
+.descripcion p{
+  font-size: 13px;
+  line-height: 1.3em;
+  margin-top: -10px;
+  color: black;
+}
+
+.btn-div {
+  text-align: center;
+}
+
+.btn {
+  background-color: #a8ce7d;
+  color: #fcf5ed;
+  cursor: pointer;
+  width: 150px;
+  height: 38px;
+  font-size: 13px;
+  font-weight: 600px;
+  box-shadow: 3px 3px 3px 3px #748e63;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .menu-container {
     position: relative;
@@ -185,5 +269,9 @@ ul {
 
   .galeria-img {
     flex-direction: column;
+  }
+
+  .row {
+    width: 100%;
   }
 }
