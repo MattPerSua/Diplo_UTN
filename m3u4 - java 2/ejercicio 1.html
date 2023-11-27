@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+            cursor: pointer;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function cambiarColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+
+    <div class="cuadrado" style="background-color: red;" onclick="cambiarColor('red')"></div>
+    <div class="cuadrado" style="background-color: green;" onclick="cambiarColor('green')"></div>
+    <div class="cuadrado" style="background-color: blue;" onclick="cambiarColor('blue')"></div>
+
+</body>
+</html>
