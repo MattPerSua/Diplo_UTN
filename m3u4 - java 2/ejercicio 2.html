@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Caracteres</title>
+</head>
+<body>
+
+    <textarea id="miTextarea" rows="4" cols="50" oninput="actualizarContador()"></textarea>
+    <p>Cantidad de caracteres: <span id="contador">0</span></p>
+
+    <script>
+        function actualizarContador() {
+            const textarea = document.getElementById('miTextarea');
+            const contadorSpan = document.getElementById('contador');
+            const contador = textarea.value.length;
+
+            contadorSpan.textContent = contador;
+        }
+    </script>
+
+</body>
+</html>
