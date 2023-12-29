@@ -26,39 +26,50 @@
             <img src="" alt="" />
           </object>
         </a>
-
+      
+        <!-- botón de menú -->
+        <button class="menu-btn" onclick="toggleMenu()">☰ Menú</button>
+      
         <!-- menu items -->
         <div class="menu">
           <ul class="nav__list">
             <li class="nav__item">
               <a href="index.html" class="nav__link">
-                <i class="ri-home-line">Home</i>
+                <i class="ri-home-line"></i> Home
               </a>
             </li>
             <li class="nav__item">
               <a href="personajes.html" class="nav__link">
-                <i class="ri-user-line">Personajes</i>
+                <i class="ri-user-line"></i> Personajes
               </a>
             </li>
             <li class="nav__item">
               <a href="temporadas.html" class="nav__link">
-                <i class="ri-book-line">Temporadas</i>
+                <i class="ri-book-line"></i> Temporadas
               </a>
             </li>
             <li class="nav__item">
               <a href="galeria.html" class="nav__link">
-                <i class="ri-artboard-line">Galeria</i>
+                <i class="ri-artboard-line"></i> Galería
               </a>
             </li>
             <li class="nav__item">
               <a href="contacto.html" class="nav__link">
-                <i class="ri-survey-line">Contacto</i>
+                <i class="ri-survey-line"></i> Contacto
               </a>
             </li>
           </ul>
-          <ul></ul>
+          <!-- Otros elementos del menú desplegable si es necesario -->
         </div>
       </nav>
+      
+      <!-- Script JavaScript -->
+      <script>
+        function toggleMenu() {
+          const menu = document.querySelector('.menu');
+          menu.classList.toggle('active');
+        }
+      </script>
 
       <div class="team-container">
         <div class="personajes-container">

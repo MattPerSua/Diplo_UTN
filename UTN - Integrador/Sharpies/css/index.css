@@ -57,13 +57,22 @@ footer {
   color: #f9b572;
 }
 
-nav ul li a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
+
 
 ul {
   list-style: none;
 }
+
+.nav__item {
+  margin-bottom: 10px;
+  transition: box-shadow 0.3s ease; /* Agregar una transición para un cambio suave */
+}
+
+.nav__item:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Cambiar el sombreado al hacer hover */
+  
+}
+
 
 .nav__list {
   display: flex;
@@ -446,6 +455,11 @@ label {
   }
 }
 
+.menu.active {
+  display: block;
+}
+
+/* Mobile First */
 @media screen and (max-width: 767px) {
   .menu-container {
     position: relative;
@@ -456,33 +470,73 @@ label {
     margin-top: -30px;
   }
 
+  .menu {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav__item {
+    margin-bottom: 10px;
+  }
+
+  .nav__link {
+    text-decoration: none;
+    color: #2e64a1;
+    font-size: 18px;
+  }
+
+  .menu-btn {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    background: #748e63;
+    color: #a8ce7d;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+
   .heading {
     padding: 0px 20px;
   }
-  .heading h1{
+
+  .heading h1 {
     font-size: 36px;
   }
-  .heading p{
+
+  .heading p {
     font-size: 17px;
     margin-bottom: 0px;
   }
-  .container{
+
+  .container {
     padding: 0px;
   }
+
   .about {
     padding: 20px;
     flex-direction: column;
   }
-  .about-image{
+
+  .about-image {
     margin-right: 0px;
     margin-bottom: 20px;
   }
-  .about-content p{
+
+  .about-content p {
     padding: 0px;
     font-size: 16px;
   }
 
-  .about-content .read-more{
+  .about-content .read-more {
     font-size: 16px;
   }
 
@@ -499,6 +553,7 @@ label {
   }
 }
 
+/* Tablets */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .menu-container {
     position: relative;
@@ -507,6 +562,16 @@ label {
     align-items: center;
     align-content: center;
   }
+}
 
+/* Desktops and Larger */
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
 
+  /* Asegúrate de agregar el siguiente estilo para mostrar el menú principal en lugar del botón */
+  .menu .active {
+    display: flex;
+  }
 }
